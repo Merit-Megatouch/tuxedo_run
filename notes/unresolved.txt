@@ -1,0 +1,10 @@
+# Symbols no library, runtime or megatouch-host provides (2026-10-07)
+# megatouch-host loads the game with RTLD_NOW, so each of these must be defined
+# (usually in src/host/loader_services.cpp) before the game will start.
+# symbol | needed by
+GlobalVirtualManager | tuxedo_run.so
+Bitmap::CreateTextBoxTTFS(char const*, int, int, int, int, int, int, bool, char*) | tuxedo_run.so
+TextUtils::Patch(char*, int, char const*, char const*) | tuxedo_run.so
+ustrzncat | tuxedo_run.so
+ustrzncpy | tuxedo_run.so
+voice_set_position | tuxedo_run.so
